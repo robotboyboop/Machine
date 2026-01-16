@@ -25,7 +25,12 @@ local Tab = TabSection:CreateTab({
     Columns = 2,
 }, "TAB")
 
-local Button = Tab:CreateButton({
+local Groupbox = Tab:CreateGroupbox({
+    Name = "Groupbox",
+    Column = 1,
+}, "GROUPBOX")
+
+local Button = Groupbox:CreateButton({
     Name = "Button",
     Icon = NebulaIcons:GetIcon('check', 'Material'),
     Callback = function()
