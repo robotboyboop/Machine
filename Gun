@@ -1,1 +1,34 @@
+local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starlight"))()  
 
+local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
+
+local Window = Starlight:CreateWindow({
+    Name = "MyScript",
+    Subtitle = "v1.0",
+    Icon = 123456789,
+
+    LoadingSettings = {
+        Title = "My Script Hub",
+        Subtitle = "Welcome to My Script Hub",
+    },
+
+    FileSettings = {
+        ConfigFolder = "MyScript"
+    },
+})
+
+local TabSection = Window:CreateTabSection("Tab Section")
+
+local Tab = TabSection:CreateTab({
+    Name = "Tab",
+    Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
+    Columns = 2,
+}, "TAB")
+
+local Button = Tab:CreateButton({
+    Name = "Button",
+    Icon = NebulaIcons:GetIcon('check', 'Material'),
+    Callback = function()
+        Starlight:Destroy()
+    end,
+}, "BUTTOM")
