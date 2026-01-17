@@ -5,7 +5,7 @@ local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/neb
 local Window = Starlight:CreateWindow({
     Name = "MyScript",
     Subtitle = "v1.0",
-    Icon = 123456789,
+    Icon = 87917453010959,
 
     LoadingSettings = {
         Title = "My Script Hub",
@@ -13,7 +13,7 @@ local Window = Starlight:CreateWindow({
     },
 
     FileSettings = {
-        ConfigFolder = "MyScript"
+        ConfigFolder = nil
     },
 })
 
@@ -30,10 +30,18 @@ local Groupbox = Tab:CreateGroupbox({
     Column = 1,
 }, "GROUPBOX")
 
-local Button = Groupbox:CreateButton({
-    Name = "Button",
+local IY = Groupbox:CreateButton({
+    Name = "Load IY",
     Icon = NebulaIcons:GetIcon('check', 'Material'),
     Callback = function()
-        Starlight:Destroy()
+        return loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+}, "BUTTOM")
+
+local DEX = Groupbox:CreateButton({
+    Name = "Load Dex++",
+    Icon = NebulaIcons:GetIcon('check', 'Material'),
+    Callback = function()
+        return loadstring(game:HttpGet("https://github.com/AZYsGithub/DexPlusPlus/releases/latest/download/out.lua"))()
     end,
 }, "BUTTOM")
